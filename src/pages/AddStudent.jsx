@@ -1,18 +1,33 @@
 import React,{useState} from 'react'
 import Navbar from '../components/Navbar'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 const AddStudent = () => {
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
   const [mobile,setMobile] = useState("")
   const [department, setDepartment] = useState("")
   const [course, setCourse] = useState("")
+  function handleForm(e){
+      e.preventDefault()
+      const data = {name,email,mobile,department,course}
+      axios.post("http://localhost:3000/users",data)
+      .then(()=>{
+          toast.success("Student Added...")
+          setName("")
+          setEmail("")
+          setMobile("")
+          setDepartment("")
+          setCourse("")
+      })
+      .catch(err=>toast.error("Failed to Add..."))
+  }
   return (
     <>
     <Navbar/>
       <center><h1>Add Student</h1></center>
-
       <center>
-        <form>
+        <form onSubmit={handleForm}>
           <input 
           type="text" 
           placeholder='Enter name' 

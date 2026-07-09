@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "name": "Kiran",
+      "email": "Kiran@gmail.com",
+      "mobile": "987879878",
+      "department": "CSE",
+      "course": "PFS",
+      "id": "ydG630Hute0"
+    },
+    {
+      "name": "Kiran",
+      "email": "Kiran@gmail.com",
+      "mobile": "987879878",
+      "department": "CSE",
+      "course": "PFS",
+      "id": "gy6hDy-LQ3s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
