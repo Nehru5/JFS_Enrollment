@@ -1,8 +1,10 @@
 import React,{useEffect,useState} from 'react'
 import Navbar from '../components/Navbar'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const ViewStudent = () => {
   const [students, setStudents] = useState([])
+  const navigate = useNavigate()
   function fetchData(){
     axios.get("http://localhost:3000/users")
     .then(x=>setStudents(x.data))
@@ -11,6 +13,10 @@ const ViewStudent = () => {
   useEffect(()=>{
     fetchData()
   },[])
+
+  function handleUpdate(id){
+    navigate(`/updatestudent/${id}`)
+  }
     return (
     <>
     <Navbar/>
@@ -22,7 +28,7 @@ const ViewStudent = () => {
           <p><b>Mobile:</b> {x.mobile}</p>
           <p><b>Department:</b> {x.department}</p>
           <p><b>Course:</b> {x.course}</p>
-          <button>Edit</button>
+          <button onClick={()=>{handleUpdate(x.id)}}>Edit</button>
           <button>Delete</button>
         </div>
       })}

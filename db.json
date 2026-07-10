@@ -5,7 +5,7 @@
       "email": "Kiran@gmail.com",
       "mobile": "987879878",
       "department": "CSE",
-      "course": "PFS",
+      "course": "Java",
       "id": "ydG630Hute0"
     },
     {
@@ -15,6 +15,22 @@
       "department": "CSE",
       "course": "PFS",
       "id": "gy6hDy-LQ3s"
+    },
+    {
+      "name": "rajesh",
+      "email": "Kiran@gmail.com",
+      "mobile": "987879878",
+      "department": "CSE",
+      "course": "MERN",
+      "id": "qsHunzgzBm8"
+    },
+    {
+      "name": "Santhosh",
+      "email": "Kiran@gmail.com",
+      "mobile": "987879878",
+      "department": "CSE",
+      "course": "PFS",
+      "id": "gUv18FYylPM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
